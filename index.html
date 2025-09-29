@@ -395,8 +395,17 @@
       <div class="footer-subscribe">
         <p class="subscribe-title">Subscribe</p>
         <form class="subscribe-form" action="#" method="post" name="subscribe-form">
-          <label class="visually-hidden" for="subscribe-email">Email</label>
-          <input class="subscribe-input" type="email" name="email" id="subscribe-email" placeholder="E-mail" />
+          <label class="subscribe-label">
+            <input
+              class="subscribe-input"
+              type="email"
+              name="email"
+              id="subscribe-email"
+              placeholder="E-mail"
+              required
+            />
+            <span class="visually-hidden">Email</span>
+          </label>
           <button class="subscribe-btn" type="submit">
             Subscribe
             <svg class="subscribe-icon" width="24" height="24">
@@ -462,7 +471,11 @@
 
         <!-- Agreement -->
         <div class="form-agreement">
-          <input class="agreement-checkbox visually-hidden" type="checkbox" name="privacy" id="user-privacy" />
+          <input class="agreement-checkbox visually-hidden"
+            id="user-privacy"
+            name="user-privacy"
+            type="checkbox"
+            value="true" />
           <label class="agreement-label" for="user-privacy">
             <span class="agreement-box">
               <svg class="agreement-check" width="10" height="8">
@@ -473,6 +486,7 @@
           </label>
         </div>
 
+        <!-- Submit -->
         <button class="modal-submit" type="submit">Send</button>
       </form>
     </div>

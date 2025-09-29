@@ -474,8 +474,7 @@ header .nav-link:focus::after,
   width: 264px;
 }
 
-.socials-title,
-.subscribe-title {
+.socials-title {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -489,26 +488,42 @@ header .nav-link:focus::after,
   max-width: 453px;
 }
 
+.subscribe-title {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
 .subscribe-form { 
   display: flex; 
   gap: 24px; 
   align-items: center; 
 }
 
+.subscribe-label { 
+  display: block; 
+}
+
 .subscribe-input {
-  width: 264px; 
-  height: 40px; 
-  padding: 8px 16px; 
-  color: #ffffff;  
-  border: 1px solid #8e8f99; 
-  background-color: transparent; 
-  border-radius: 4px;  
-  outline: none;  
+  width: 264px;                 
+  height: 40px;                 
+  border: 1px solid #ffffff;    
+  background-color: transparent;
+  font-size: 12px;              
+  line-height: 2;              
+  letter-spacing: 0.04em;       
+  padding-left: 16px;          
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
+  border-radius: 4px;          
+  color: #ffffff;             
+  outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-input::placeholder { 
-  color: rgba(255,255,255,0.6); 
+  color: #ffffff;
 }
 
 .subscribe-input:focus { 
@@ -516,19 +531,21 @@ header .nav-link:focus::after,
 }
 
 .subscribe-btn {
-  display: inline-flex; 
+  min-width: 165px;                 
+  height: 40px;                    
+  display: flex;                    
+  justify-content: center;          
   align-items: center; 
-  gap: 8px;
-  height: 40px; 
-  padding: 8px 24px; 
-  border: none; 
-  border-radius: 4px;
-  background-color: #4d5ae5; 
-  color: #fff; 
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-  cursor: pointer;
+  font-size: 16px;                 
+  font-weight: 500;                 
+  line-height: 1.5;                 
+  letter-spacing: 0.04em;           
+  color: #ffffff;                   
+  cursor: pointer;                  
+  background-color: #4D5AE5;       
+  border: none;                    
+  border-radius: 4px;               
+  padding: 8px 24px;                
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -537,7 +554,9 @@ header .nav-link:focus::after,
 }
 
 .subscribe-icon { 
-  fill: #fff; 
+  fill: #fff;
+  margin-left: 16px;           
+  display: inline-block; 
 }
 
 /* ==== MODAL & FORMS ============ */
@@ -545,7 +564,10 @@ header .nav-link:focus::after,
 /* backdrop */
 .backdrop {
   position: fixed; 
-  inset: 0; 
+  top: 0;         
+  left: 0;        
+  width: 100%;   
+  height: 100%; 
   background: rgba(46,47,66,0.4);
   opacity: 0; 
   visibility: hidden; 
@@ -567,6 +589,7 @@ header .nav-link:focus::after,
   left: 50%;
   transform: translate(-50%, -50%) scale(0.7);
   width: 408px; 
+  min-height: 584px; 
   max-width: calc(100% - 32px);
   background: #fcfcfc; 
   border-radius: 4px; 
@@ -591,16 +614,17 @@ header .nav-link:focus::after,
   border-radius: 50%;  
   border: 1px solid rgba(0,0,0,0.1);  
   background-color: #e7e9fc; 
-  display: grid; 
-  place-items: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 0; 
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1), 
-  border-color 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-close-btn:hover, .modal-close-btn:focus {
   background-color: #404bbf; 
-  border-color: transparent;
+  border: none;
 }
 
 .modal-close-btn:hover .modal-close-icon,
@@ -625,15 +649,20 @@ header .nav-link:focus::after,
 
 /* форма в модалці */
 .modal-form { 
-  display: grid; 
-  gap: 8px; 
+  display: block; 
 }
 
-.form-field { display: grid; 
-  gap: 4px; 
+.form-field { 
+  margin-bottom: 8px; 
 }
 
-.form-label { 
+.form-field--comment{ 
+  margin-bottom: 16px; 
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px; 
   font-size: 12px; 
   line-height: 1.17; 
   letter-spacing: 0.04em; 
@@ -650,9 +679,11 @@ header .nav-link:focus::after,
   border-radius: 4px; 
   background: transparent;
   border: 1px solid rgba(46,47,66,0.4);
-  padding: 8px 16px 8px 38px; 
-  outline: none;
-  transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
+  padding-left: 38px;  
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 14px;
+  color: #2e2f42;
 }
 
 .form-icon {
@@ -676,17 +707,14 @@ header .nav-link:focus::after,
 .form-textarea {
   width: 100%; 
   min-height: 120px; 
-  resize: vertical;
+  resize: none;
   border-radius: 4px; 
   background: transparent; 
   border: 1px solid rgba(46,47,66,0.4);
   padding: 8px 16px; 
-  outline: none; 
+  outline: transparent;
   font-family: inherit;
   transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
-}
-
-.form-textarea::placeholder { 
   color: rgba(46,47,66,0.4); 
   font-size: 12px; 
   line-height: 1.17; 
@@ -716,14 +744,15 @@ header .nav-link:focus::after,
 }
 
 .agreement-box {
-  width: 16px; height: 16px; 
+  width: 16px; 
+  height: 16px; 
   border: 1px solid rgba(46,47,66,0.4); 
   border-radius: 2px;
   display: inline-flex; 
   align-items: center; 
   justify-content: center;
-  background-color: #fff; 
-  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1), border-color 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 
 .agreement-check { 
@@ -733,10 +762,11 @@ header .nav-link:focus::after,
 
 .agreement-checkbox:checked + .agreement-label > .agreement-box {
   background-color: #404bbf; 
-  border-color: #404bbf;
+  border: none;
+  fill: #F4F4FD;
 }
 
-.agreement-check {
+.agreement-checkbox:checked + .agreement-label > .agreement-box .agreement-check  {
   fill: #f4f4fd;
 }
 
@@ -756,6 +786,7 @@ header .nav-link:focus::after,
   color: #fff;
   background-color: #4d5ae5; 
   font-weight: 500; 
+  font-size: 16px; 
   letter-spacing: 0.04em;
   transition: background-color 250ms cubic-bezier(0.4,0,0.2,1);
   cursor: pointer;
