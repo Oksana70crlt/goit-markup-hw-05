@@ -743,12 +743,12 @@ header .nav-link:focus::after,
   color: #8e8f99;
 }
 
-.agreement-label > span.agreement-box {
+.agreement-box {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  display: inline-flex; /* <- ключова вимога */
+  display: inline-flex;          
   align-items: center;
   justify-content: center;
   fill: transparent;
